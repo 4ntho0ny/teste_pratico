@@ -22,7 +22,10 @@ async def root(payload: Lista):
         lista_aux.append(item)
         lista.append(item)
 
-    return {"lista": lista}
+    response = {
+        "lista": lista
+        }
+    return response
 
 @app.post("/listar-pares", response_model=ListaPares)
 async def listar_pares(payload: Lista):
