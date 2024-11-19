@@ -21,7 +21,7 @@ async def root(payload: Lista):
 
     return {"lista": lista}
 
-@app.post("/listar-pares", response_model=ListaPares)
+@app.post("/listar-pares", response_model=Lista)
 async def listar_pares(payload: Lista):
     """
         ### Função listar pares
@@ -39,7 +39,7 @@ async def listar_pares(payload: Lista):
             nova_lista.append(item)
     return {"lista_pares": nova_lista}
 
-@app.get("/listar-pares-banco", response_model=ListaPares)
+@app.get("/listar-pares-banco", response_model=Lista)
 async def listar_pares():
     nova_lista = []
     for item in lista:
