@@ -3,6 +3,7 @@ from pydantic import BaseModel, Field
 
 app = FastAPI()
 
+# Classe para todas as listas
 class Lista(BaseModel):
     lista: list[int]
 
