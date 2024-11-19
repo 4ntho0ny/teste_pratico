@@ -12,7 +12,6 @@ class Lista(BaseModel):
 @app.get("/")
 async def root():
     return {"mensagem": "Hello World"}
-    return {"mensagi": "Hello World"}
 
 lista = []
 
