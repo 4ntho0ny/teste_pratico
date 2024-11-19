@@ -9,7 +9,7 @@ class Lista(BaseModel):
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"mensagi": "Hello World"}
 
 lista = []
 
