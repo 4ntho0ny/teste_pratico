@@ -6,9 +6,6 @@ app = FastAPI()
 class Lista(BaseModel):
     lista: list[int]
 
-class ListaPares(BaseModel):
-    lista_pares: list[int]
-
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
