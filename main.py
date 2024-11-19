@@ -40,7 +40,10 @@ async def listar_pares(payload: Lista):
     for item in payload.lista:
         if item % 2 == 0:
             nova_lista.append(item)
-    return {"lista_pares": nova_lista}
+    response = {
+        "lista_pares": nova_lista
+        }
+    return response
 
 @app.get("/listar-pares-banco", response_model=ListaPares)
 async def listar_pares():
@@ -48,4 +51,7 @@ async def listar_pares():
     for item in lista:
         if item % 2 == 0:
             nova_lista.append(item)
-    return {"lista_pares": nova_lista}
+    response = {
+        "lista_pares": nova_lista
+        }
+    return response
