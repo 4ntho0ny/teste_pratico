@@ -3,11 +3,9 @@ from pydantic import BaseModel, Field
 
 app = FastAPI()
 
+# Classe para todas as listas
 class Lista(BaseModel):
     lista: list[int]
-
-class ListaPares(BaseModel):
-    lista_pares: list[int]
 
 @app.get("/")
 async def root():
@@ -27,7 +25,7 @@ async def root(payload: Lista):
         }
     return response
 
-@app.post("/listar-pares", response_model=ListaPares)
+@app.post("/listar-pares", response_model=Lista)
 async def listar_pares(payload: Lista):
     """
         ### Função listar pares
@@ -48,7 +46,7 @@ async def listar_pares(payload: Lista):
         }
     return response
 
-@app.get("/listar-pares-banco", response_model=ListaPares)
+@app.get("/listar-pares-banco", response_model=Lista)
 async def listar_pares():
     nova_lista = []
     for item in lista:
