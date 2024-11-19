@@ -3,13 +3,15 @@ from pydantic import BaseModel, Field
 
 app = FastAPI()
 
+#Teste
+
 # Classe para todas as listas
 class Lista(BaseModel):
     lista: list[int]
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"mensagem": "Hello World"}
 
 lista = []
 
