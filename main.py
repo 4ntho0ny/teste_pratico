@@ -13,7 +13,7 @@ class Lista(BaseModel):
 async def root():
     return {"mensagem": "Hello World"}
 
-lista = []
+lista_b1 = []
 
 @app.post("/adicionar-elementos-lista", response_model=Lista)
 async def root(payload: Lista):
