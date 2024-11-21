@@ -20,10 +20,10 @@ async def root(payload: Lista):
     lista_aux = []
     for item in payload.lista:
         lista_aux.append(item)
-        lista.append(item)
+        lista_b1.append(item)
 
     response = {
-        "lista": lista
+        "lista": lista_b1
         }
     return response
 
@@ -51,7 +51,7 @@ async def listar_pares(payload: Lista):
 @app.get("/listar-pares-banco", response_model=Lista)
 async def listar_pares():
     nova_lista = []
-    for item in lista:
+    for item in lista_b1:
         if item % 2 == 0:
             nova_lista.append(item)
     response = {
