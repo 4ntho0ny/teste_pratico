@@ -4,6 +4,7 @@ from pydantic import BaseModel, Field
 app = FastAPI()
 
 # Mandando a branch b1 para o repositório remoto
+# Testando
 
 # Classe para todas as listas
 class Lista(BaseModel):
