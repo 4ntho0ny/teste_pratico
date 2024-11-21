@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
-app = FastAPI()
+aplicativo = FastAPI()
 
 # Teste2
 
